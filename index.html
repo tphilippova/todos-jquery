@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ToDos</title>
+		<link href="https://fonts.googleapis.com/css?family=Kalam:400,700|Roboto:400,500i,700|Nunito:400,600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="resources/css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script src="resources/js/main.js" async></script>
+	</head>
+	<body>
+		<div>
+
+			<!-- Header -->
+			<nav class="navbar navbar-expand-sm bg-color navbar-dark shadow-sm">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<img class="navbar-brand" src="./resources/img/logo_w.png" alt="logo">
+						<span class="moto">Create - Complete - Check your TO-DO List</span>
+					</div>
+
+					<!-- Login / Logout button -->
+					<div class="nav navbar-nav navbar-right">
+						<div class="nav-item dropdown">
+							<span class="login-button" >Login</span>
+						</div>
+					</div>
+
+					<!-- Login form -->
+					<div id="login-form" class="login-form dropdown-menu dropdown-menu-right form-wrapper">
+						<form>
+							<div class="form-group">
+								<input type="text" class="email form-control" placeholder="Email">
+							</div>
+							<div class="form-group">
+								<input type="text" class="password form-control" placeholder="Password">
+							</div>
+							<button id="signUpBtn" class="sign-up-button btn btn-block" type="submit">Sing In</button>
+						</form>
+					</div>
+
+				</div>
+			</nav>
+
+			<!-- Main block -->
+			<div class="container">
+				<div class="row pt-5 pb-5 mb-5">
+					<div class="col-xs-1 col-lg-2">
+					</div>
+					<!-- Input field -->
+					<div class="col-xs-10 col-lg-8 mr-3 ml-3">
+						<div id="myTask" class="heading">
+							<h3 class="pb-3">Things to do today</h3>
+							<div class="row no-gutters">
+								<div class="col-10">
+									<input  id="myInput" class="form-control mb-2 mr-sm-2" type="text" placeholder="To...">
+								</div>
+								<div class="col-2">
+									<button id="addBtn" class="btn my-btn-primary my-disabled mb-2 w-100" disabled="disabled">Add</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- List of todos -->
+						<div class="list row no-gutters">
+							<div class="col-12">
+								<ul id="myList" class="todoList list-group">
+<!--									<li class="list-group-item">-->
+<!--										<label class="mb-0"></label>-->
+<!--										<input type="text">-->
+<!--										<span class="close">&times;</span>-->
+<!--									</li>-->
+								</ul>
+							</div>
+						</div>
+
+						<!-- Displaying Todo List with filters -->
+						<div id="filter" class="filter row mt-1">
+							<div class="col-6">
+								<div class="btn-group btn-group-sm">
+									<button id="allTodo" type="button" class="button active">All</button>
+									<button id="doneTodo" type="button" class="button">Done</button>
+									<button id="undoneTodo" type="button" class="button">Undone</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-1 col-lg-2">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
