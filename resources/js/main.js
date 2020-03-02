@@ -58,12 +58,17 @@ $(document).ready(() => {
 							$label.text(e.target.value);
 							$editInput.hide();
 							$label.show();
-						} if (e.keyCode === 27) {
+						} if (e.keyCode === 27 || e.keyCode === 13 && $editInput.val().length === 0) {
 							$label.val();
 							$editInput.hide();
 							$label.show();
 						}
-					});
+					})
+					.on('blur', (e) => {
+						$label.text(e.target.value);
+						$editInput.hide();
+						$label.show();
+					})
 			});
 
 		$li.append($label);
